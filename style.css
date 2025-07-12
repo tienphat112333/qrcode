@@ -1,47 +1,64 @@
-* {
+:root {
+  --white: hsl(0, 0%, 100%);
+  --lightGray: hsl(212, 45%, 89%);
+  --grayishblue: hsl(216, 15%, 48%);
+  --darkBlue: hsl(218, 44%, 22%);
+}
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
+  list-style: none;
   box-sizing: border-box;
 }
-
+html,
 body {
-  background-color: hsl(212, 45%, 89%);
-  height: 100vh;
+  height: 100%;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  background-color: var(--lightGray);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.imageQrcode {
-  height: 250px;
-  width: 250px;
-  border-radius: 10px;
-}
-
-.container {
-  background-color: hsl(0, 0%, 100%);
-  width: 280px;
-  height: 420px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  border-radius: 10px;
-}
-
-h3 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
-  width: 14rem;
-  font-size: 20px;
-  margin-top: 24px;
   margin-bottom: 15px;
 }
-
 p {
-  width: 14rem;
-  font-size: 14px;
-  color: hsl(216, 15%, 48%);
+  font-weight: 400;
   margin-bottom: 15px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.card {
+  background-color: var(--white);
+  padding: 15px;
+  border-radius: 15px;
+  width: 320px;
+}
+.card img {
+  border-radius: 10px;
+}
+.card_body {
+  padding: 20px 15px;
+  text-align: center;
+}
+.card_body h4 {
+  color: var(--darkBlue);
+  font-size: 22px;
+}
+.card_body p {
+  color: var(--grayishblue);
+  font-size: 15px;
 }
